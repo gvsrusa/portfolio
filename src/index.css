@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+:root {
+  --bg-primary: #0f172a; /* Slate 900 */
+  --text-primary: #f8fafc; /* Slate 50 */
+  --accent: #38bdf8; /* Sky 400 */
+  
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: dark;
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  display: block; /* Vite default was flex place-items-center which centers everything, usually not what we want for a long page */
+  min-width: 320px;
+  min-height: 100vh;
+}
