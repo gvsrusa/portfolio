@@ -5,7 +5,7 @@ const projects = [
         tech: ['JavaScript', 'React', 'Algorithms'],
         repo: 'https://github.com/gvsrusa/lottery-wheels',
         demo: 'https://lottery-wheels.vercel.app',
-        image: 'bg-gradient-to-br from-indigo-500 to-purple-600'
+        image: '/projects/lottery-wheels.png'
     },
     {
         title: 'Miowsis',
@@ -13,7 +13,7 @@ const projects = [
         tech: ['React', 'AI', 'Finance API'],
         repo: 'https://github.com/gvsrusa/miowsis',
         demo: 'https://miowsis-frontend.vercel.app',
-        image: 'bg-gradient-to-br from-emerald-400 to-cyan-500'
+        image: '/projects/miowsis.png'
     },
     {
         title: 'Agri Connect',
@@ -21,7 +21,7 @@ const projects = [
         tech: ['Node.js', 'React', 'MongoDB'],
         repo: 'https://github.com/gvsrusa/agri-connect',
         demo: 'https://agri-connect3.vercel.app',
-        image: 'bg-gradient-to-br from-green-500 to-lime-600'
+        image: 'bg-gradient-to-br from-green-500 to-lime-600' // 404 on screenshot, kept fallback
     },
     {
         title: 'Market Viewer',
@@ -29,7 +29,7 @@ const projects = [
         tech: ['React', 'TradingView API', 'Data Visualization'],
         repo: 'https://github.com/gvsrusa/market-viewer',
         demo: 'https://market-viewer.vercel.app',
-        image: 'bg-gradient-to-br from-blue-600 to-indigo-800'
+        image: '/projects/market-viewer.png'
     },
     {
         title: 'Smart Agriculture',
@@ -37,7 +37,7 @@ const projects = [
         tech: ['Python', 'IoT', 'React', 'Sensors'],
         repo: 'https://github.com/gvsrusa/smart-agriculture',
         demo: 'https://smart-agriculture.vercel.app',
-        image: 'bg-gradient-to-br from-teal-500 to-green-700'
+        image: 'bg-gradient-to-br from-teal-500 to-green-700' // 404 on screenshot, kept fallback
     },
     {
         title: 'Sevak Firebase',
@@ -45,7 +45,7 @@ const projects = [
         tech: ['Firebase', 'Node.js', 'Cloud Functions'],
         repo: 'https://github.com/gvsrusa/sevak-firebase',
         demo: 'https://sevak-firebase.vercel.app',
-        image: 'bg-gradient-to-br from-orange-400 to-yellow-500'
+        image: '/projects/sevak-firebase.png'
     },
     {
         title: 'Calc',
@@ -53,16 +53,25 @@ const projects = [
         tech: ['React', 'CSS', 'Math.js'],
         repo: 'https://github.com/gvsrusa/Calc',
         demo: 'https://calc-seven-psi.vercel.app',
-        image: 'bg-gradient-to-br from-pink-500 to-rose-600'
+        image: '/projects/calc.png'
     }
 ]
 
 const ProjectCard = ({ project }) => {
     return (
         <div className="group bg-slate-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-sky-500/10 transition-all duration-300 hover:-translate-y-2 border border-slate-700 hover:border-sky-500/30 flex flex-col h-full">
-            {/* Image Placeholder */}
-            <div className={`h-48 w-full ${project.image} relative overflow-hidden shrink-0`}>
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
+            {/* Image Preview */}
+            <div className="h-48 w-full relative overflow-hidden shrink-0 border-b border-slate-700/50">
+                {project.image.startsWith('/') ? (
+                    <img
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                    />
+                ) : (
+                    <div className={`w-full h-full ${project.image}`}></div>
+                )}
+                <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors"></div>
             </div>
 
             <div className="p-6 flex flex-col flex-grow">
