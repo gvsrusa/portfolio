@@ -3,6 +3,7 @@ import Hero from './components/Hero'
 import Projects from './components/Projects'
 import About from './components/About'
 import Footer from './components/Footer'
+import { Analytics } from "@vercel/analytics/react"
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <About />
       </main>
       <Footer />
+      <Analytics />
     </div>
   )
 }
