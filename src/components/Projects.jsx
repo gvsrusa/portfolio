@@ -4,7 +4,7 @@ const projects = [
         description: 'A comprehensive lottery wheeling system generator with smart pick strategies and randomized distribution logic.',
         tech: ['JavaScript', 'React', 'Algorithms'],
         repo: 'https://github.com/gvsrusa/lottery-wheels',
-        demo: '#',
+        demo: 'https://lottery-wheels.vercel.app',
         image: 'bg-gradient-to-br from-indigo-500 to-purple-600'
     },
     {
@@ -12,7 +12,7 @@ const projects = [
         description: 'Micro Investment Optimizer - AI-powered platform for tracking micro-investments with ESG impact scoring.',
         tech: ['React', 'AI', 'Finance API'],
         repo: 'https://github.com/gvsrusa/miowsis',
-        demo: '#',
+        demo: 'https://miowsis-frontend.vercel.app',
         image: 'bg-gradient-to-br from-emerald-400 to-cyan-500'
     },
     {
@@ -20,7 +20,7 @@ const projects = [
         description: 'Platform connecting farmers with experts, featuring crop recommendations and real-time weather updates.',
         tech: ['Node.js', 'React', 'MongoDB'],
         repo: 'https://github.com/gvsrusa/agri-connect',
-        demo: '#',
+        demo: 'https://agri-connect3.vercel.app',
         image: 'bg-gradient-to-br from-green-500 to-lime-600'
     },
     {
@@ -28,15 +28,15 @@ const projects = [
         description: 'Real-time financial market dashboard with interactive charts and trading widgets.',
         tech: ['React', 'TradingView API', 'Data Visualization'],
         repo: 'https://github.com/gvsrusa/market-viewer',
-        demo: '#',
+        demo: 'https://market-viewer.vercel.app',
         image: 'bg-gradient-to-br from-blue-600 to-indigo-800'
     },
     {
         title: 'Smart Agriculture',
         description: 'IoT-based system for monitoring soil moisture and environmental conditions to optimize irrigation.',
         tech: ['Python', 'IoT', 'React', 'Sensors'],
-        repo: 'https://github.com/gvsrusa/smart-agriculuture',
-        demo: '#',
+        repo: 'https://github.com/gvsrusa/smart-agriculture',
+        demo: 'https://smart-agriculture.vercel.app',
         image: 'bg-gradient-to-br from-teal-500 to-green-700'
     },
     {
@@ -44,7 +44,7 @@ const projects = [
         description: 'Backend service layer utilizing Firebase for real-time data synchronization and user authentication.',
         tech: ['Firebase', 'Node.js', 'Cloud Functions'],
         repo: 'https://github.com/gvsrusa/sevak-firebase',
-        demo: '#',
+        demo: 'https://sevak-firebase.vercel.app',
         image: 'bg-gradient-to-br from-orange-400 to-yellow-500'
     },
     {
@@ -52,7 +52,7 @@ const projects = [
         description: 'A modern, scientific calculator application with advanced mathematical functions and history tracking.',
         tech: ['React', 'CSS', 'Math.js'],
         repo: 'https://github.com/gvsrusa/Calc',
-        demo: '#',
+        demo: 'https://calc-seven-psi.vercel.app',
         image: 'bg-gradient-to-br from-pink-500 to-rose-600'
     }
 ]
