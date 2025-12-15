@@ -13,6 +13,14 @@ const Hero = () => {
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-sky-500/10 rounded-full blur-[100px] -z-10"></div>
 
             <div className={`text-center z-10 transition-all duration-1000 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+                <div className="mb-8 relative inline-block">
+                    <div className="absolute inset-0 bg-sky-500 rounded-full blur opacity-40"></div>
+                    <img
+                        src="/profile.jpg"
+                        alt="Venkata Subbarao Gorantla"
+                        className="relative w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-slate-800 shadow-xl mx-auto"
+                    />
+                </div>
                 <h2 className="text-sky-400 font-medium tracking-widest mb-4 uppercase text-sm md:text-base">Software Engineer</h2>
                 <h1 className="text-4xl md:text-7xl font-bold tracking-tighter text-white mb-6">
                     Venkata Subbarao <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-indigo-500">Gorantla</span>
