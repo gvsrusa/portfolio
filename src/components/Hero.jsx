@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import Spline from '@splinetool/react-spline'
 
 const Hero = () => {
     const [isVisible, setIsVisible] = useState(false)
@@ -9,6 +10,15 @@ const Hero = () => {
 
     return (
         <section id="hero" className="min-h-screen flex flex-col justify-center items-center relative overflow-hidden pt-20 px-6">
+
+            {/* 3D Spline Robot Background */}
+            <div className="absolute inset-0 z-0">
+                <Spline scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode" />
+            </div>
+
+            {/* Overlay to ensure text readability */}
+            <div className="absolute inset-0 bg-black/40 z-0"></div>
+
             {/* Background Decor - brighter gradients for dark mode contrast */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-indigo-600/20 rounded-full blur-[120px] -z-10 opacity-50"></div>
             <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-purple-600/10 rounded-full blur-[100px] -z-10"></div>
