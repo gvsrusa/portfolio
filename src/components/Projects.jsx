@@ -5,7 +5,8 @@ const projects = [
         tech: ['JavaScript', 'React', 'Algorithms'],
         repo: 'https://github.com/gvsrusa/lottery-wheels',
         demo: 'https://lottery-wheels.vercel.app',
-        image: '/projects/lottery-wheels.png'
+        image: '/projects/lottery-wheels.png',
+        color: 'from-purple-500 to-indigo-500'
     },
     {
         title: 'Miowsis',
@@ -13,7 +14,8 @@ const projects = [
         tech: ['React', 'AI', 'Finance API'],
         repo: 'https://github.com/gvsrusa/miowsis',
         demo: 'https://miowsis-frontend.vercel.app',
-        image: '/projects/miowsis.png'
+        image: '/projects/miowsis.png',
+        color: 'from-blue-500 to-cyan-500'
     },
     {
         title: 'Agri Connect',
@@ -21,15 +23,17 @@ const projects = [
         tech: ['Node.js', 'React', 'MongoDB'],
         repo: 'https://github.com/gvsrusa/agri-connect',
         demo: 'https://agri-connect3.vercel.app',
-        image: 'bg-gradient-to-br from-green-500 to-lime-600' // 404 on screenshot, kept fallback
+        image: 'bg-gradient-to-br from-green-500 to-lime-600',
+        color: 'from-green-500 to-emerald-500'
     },
     {
         title: 'Market Viewer',
         description: 'Real-time financial market dashboard with interactive charts and trading widgets.',
-        tech: ['React', 'TradingView API', 'Data Visualization'],
+        tech: ['React', 'TracingView API', 'Data Visualization'],
         repo: 'https://github.com/gvsrusa/market-viewer',
         demo: 'https://market-viewer.vercel.app',
-        image: '/projects/market-viewer.png'
+        image: '/projects/market-viewer.png',
+        color: 'from-orange-500 to-red-500'
     },
     {
         title: 'Smart Agriculture',
@@ -37,7 +41,8 @@ const projects = [
         tech: ['Python', 'IoT', 'React', 'Sensors'],
         repo: 'https://github.com/gvsrusa/smart-agriculture',
         demo: 'https://smart-agriculture.vercel.app',
-        image: 'bg-gradient-to-br from-teal-500 to-green-700' // 404 on screenshot, kept fallback
+        image: 'bg-gradient-to-br from-teal-500 to-green-700',
+        color: 'from-teal-500 to-green-500'
     },
     {
         title: 'Sevak Firebase',
@@ -45,7 +50,8 @@ const projects = [
         tech: ['Firebase', 'Node.js', 'Cloud Functions'],
         repo: 'https://github.com/gvsrusa/sevak-firebase',
         demo: 'https://sevak-firebase.vercel.app',
-        image: '/projects/sevak-firebase.png'
+        image: '/projects/sevak-firebase.png',
+        color: 'from-yellow-500 to-amber-500'
     },
     {
         title: 'Calc',
@@ -53,46 +59,55 @@ const projects = [
         tech: ['React', 'CSS', 'Math.js'],
         repo: 'https://github.com/gvsrusa/Calc',
         demo: 'https://calc-seven-psi.vercel.app',
-        image: '/projects/calc.png'
+        image: '/projects/calc.png',
+        color: 'from-pink-500 to-rose-500'
     }
 ]
 
 const ProjectCard = ({ project }) => {
     return (
-        <div className="group bg-slate-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-sky-500/10 transition-all duration-300 hover:-translate-y-2 border border-slate-700 hover:border-sky-500/30 flex flex-col h-full">
+        <div className="group relative bg-black/40 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/5 hover:border-white/20 transition-all duration-500 hover:-translate-y-1 flex flex-col h-full">
+
+            {/* Hover Glow Effect */}
+            <div className={`absolute inset-0 bg-gradient-to-br ${project.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}></div>
+
             {/* Image Preview */}
-            <div className="h-48 w-full relative overflow-hidden shrink-0 border-b border-slate-700/50">
+            <div className="h-48 w-full relative overflow-hidden shrink-0 border-b border-white/5">
                 {project.image.startsWith('/') ? (
                     <img
                         src={project.image}
                         alt={project.title}
-                        className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                        className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
                     />
                 ) : (
                     <div className={`w-full h-full ${project.image}`}></div>
                 )}
-                <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors"></div>
+                <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
             </div>
 
-            <div className="p-6 flex flex-col flex-grow">
-                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-sky-400 transition-colors">{project.title}</h3>
-                <p className="text-slate-400 mb-4 line-clamp-3">{project.description}</p>
+            <div className="p-6 flex flex-col flex-grow relative z-10">
+                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-slate-300 transition-all">
+                    {project.title}
+                </h3>
+                <p className="text-slate-400 mb-6 text-sm leading-relaxed line-clamp-3">
+                    {project.description}
+                </p>
 
                 <div className="flex flex-wrap gap-2 mb-6 mt-auto">
                     {project.tech.map((t) => (
-                        <span key={t} className="px-3 py-1 text-xs font-medium text-sky-300 bg-sky-900/30 rounded-full border border-sky-800">
+                        <span key={t} className="px-2.5 py-1 text-[10px] uppercase tracking-wider font-semibold text-slate-300 bg-white/5 rounded-md border border-white/5">
                             {t}
                         </span>
                     ))}
                 </div>
 
-                <div className="flex gap-4 mt-auto">
+                <div className="flex gap-3 mt-auto pt-4 border-t border-white/5">
                     {project.demo !== '#' && (
-                        <a href={project.demo} target="_blank" rel="noreferrer" className="flex-1 text-center py-2 rounded-lg bg-sky-600 hover:bg-sky-500 text-white font-medium transition-colors">
+                        <a href={project.demo} target="_blank" rel="noreferrer" className="flex-1 text-center py-2.5 rounded-lg bg-white text-black text-sm font-medium hover:bg-slate-200 transition-colors">
                             Live Demo
                         </a>
                     )}
-                    <a href={project.repo} target="_blank" rel="noreferrer" className={`flex-1 text-center py-2 rounded-lg bg-slate-700 hover:bg-slate-600 text-white font-medium transition-colors border border-slate-600 ${project.demo === '#' ? 'w-full' : ''}`}>
+                    <a href={project.repo} target="_blank" rel="noreferrer" className={`flex-1 text-center py-2.5 rounded-lg bg-white/5 hover:bg-white/10 text-white text-sm font-medium transition-colors border border-white/10 ${project.demo === '#' ? 'w-full' : ''}`}>
                         Code
                     </a>
                 </div>
@@ -103,10 +118,15 @@ const ProjectCard = ({ project }) => {
 
 const Projects = () => {
     return (
-        <section id="projects" className="py-20 px-6 max-w-7xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-16 text-center">
-                Featured <span className="text-sky-400">Projects</span>
-            </h2>
+        <section id="projects" className="py-32 px-6 max-w-7xl mx-auto">
+            <div className="text-center mb-20">
+                <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+                    Featured <span className="text-gradient">Projects</span>
+                </h2>
+                <p className="text-slate-400 max-w-xl mx-auto">
+                    A collection of applications demonstrating my expertise in full-stack development, AI integration, and modern UI/UX design.
+                </p>
+            </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {projects.map((project, index) => (

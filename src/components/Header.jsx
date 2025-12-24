@@ -19,13 +19,18 @@ const Header = () => {
     ]
 
     return (
-        <header
-            className={`fixed w-full top-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-slate-900/80 backdrop-blur-md shadow-lg py-4' : 'bg-transparent py-6'
-                }`}
-        >
-            <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
-                <a href="#" className="text-xl md:text-2xl font-bold tracking-tighter text-sky-400">
-                    Venkata Subbarao Gorantla
+        <header className="fixed w-full top-6 z-50 px-4 flex justify-center">
+            <div className={`
+                flex justify-between items-center 
+                transition-all duration-300 transform 
+                ${isScrolled ? 'w-[90%] md:w-[70%] lg:w-[50%]' : 'w-[95%] md:w-[80%] lg:w-[60%]'}
+                glass-panel rounded-full px-6 py-3
+            `}>
+                <a href="#" className="flex items-center space-x-3 group">
+                    <img src="/logo.png" alt="Logo" className="w-8 h-8 opacity-90 group-hover:opacity-100 transition-opacity" />
+                    <span className="text-lg font-bold tracking-tight text-white group-hover:text-accent-purple transition-colors">
+                        Venkata Subbarao Gorantla
+                    </span>
                 </a>
 
                 {/* Desktop Nav */}
@@ -34,7 +39,7 @@ const Header = () => {
                         <a
                             key={link.name}
                             href={link.href}
-                            className="text-slate-300 hover:text-sky-400 font-medium transition-colors"
+                            className="text-sm text-slate-300 hover:text-white font-medium transition-colors hover:shadow-[0_0_20px_rgba(255,255,255,0.3)]"
                         >
                             {link.name}
                         </a>
@@ -57,12 +62,12 @@ const Header = () => {
 
                 {/* Mobile Nav Dropdown */}
                 {isMenuOpen && (
-                    <div className="absolute top-full left-0 w-full bg-slate-900 shadow-xl border-t border-slate-800 md:hidden flex flex-col items-center py-4 space-y-4 animate-fade-in">
+                    <div className="absolute top-full left-0 right-0 mt-4 mx-4 glass-panel rounded-2xl md:hidden flex flex-col items-center py-4 space-y-4 animate-fade-in-up">
                         {navLinks.map((link) => (
                             <a
                                 key={link.name}
                                 href={link.href}
-                                className="text-slate-300 hover:text-sky-400 text-lg font-medium"
+                                className="text-slate-300 hover:text-white text-lg font-medium"
                                 onClick={() => setIsMenuOpen(false)}
                             >
                                 {link.name}

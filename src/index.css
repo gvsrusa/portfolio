@@ -1,10 +1,15 @@
 @import "tailwindcss";
 
 :root {
-  --bg-primary: #0f172a; /* Slate 900 */
-  --text-primary: #f8fafc; /* Slate 50 */
-  --accent: #38bdf8; /* Sky 400 */
-  
+  --bg-primary: #000000;
+  /* Deep Black */
+  --text-primary: #FAFAFA;
+  /* Off-white */
+  --text-secondary: #D4D4D4;
+  /* Neutral 300 */
+  --accent-purple: #A855F7;
+  --accent-blue: #3B82F6;
+
   font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -21,7 +26,41 @@
 
 body {
   margin: 0;
-  display: block; /* Vite default was flex place-items-center which centers everything, usually not what we want for a long page */
+  display: block;
   min-width: 320px;
   min-height: 100vh;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+@layer utilities {
+  .glass-panel {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .text-gradient {
+    background: linear-gradient(to right, #A855F7, #3B82F6);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.6s ease-out forwards;
 }

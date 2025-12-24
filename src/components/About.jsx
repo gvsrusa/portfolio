@@ -1,21 +1,26 @@
 const About = () => {
     return (
-        <section id="about" className="py-20 px-6 bg-slate-800/50">
-            <div className="max-w-4xl mx-auto text-center">
-                <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">About <span className="text-sky-400">Me</span></h2>
+        <section id="about" className="py-20 px-6 relative overflow-hidden">
+            {/* Background elements */}
+            <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[300px] h-[300px] bg-sky-500/5 rounded-full blur-[80px] -z-10"></div>
 
-                <div className="bg-slate-900 p-8 rounded-2xl shadow-xl border border-slate-800 mb-10">
-                    <p className="text-slate-300 text-lg leading-relaxed mb-6">
+            <div className="max-w-4xl mx-auto text-center relative z-10">
+                <h2 className="text-3xl md:text-5xl font-bold text-white mb-10">
+                    About <span className="text-gradient">Me</span>
+                </h2>
+
+                <div className="glass-panel p-8 md:p-12 rounded-3xl mb-12 transform hover:scale-[1.01] transition-transform duration-500">
+                    <p className="text-slate-300 text-lg md:text-xl leading-relaxed mb-6">
                         I am a passionate software engineer with a strong focus on building scalable, high-performance web applications.
                         With expertise in modern JavaScript frameworks and a keen eye for UI/UX design, I bridge the gap between complex engineering and intuitive user experiences.
                     </p>
-                    <p className="text-slate-300 text-lg leading-relaxed">
+                    <p className="text-slate-300 text-lg md:text-xl leading-relaxed">
                         My journey involves continuous learning and applying cutting-edge technologies to solve real-world problems.
                         Whether it's front-end architecture or back-end optimization, I strive for excellence in every line of code.
                     </p>
                 </div>
 
-                <a href="#" className="inline-block px-8 py-4 bg-sky-500 hover:bg-sky-400 text-white font-bold rounded-full transition-all shadow-lg hover:shadow-sky-500/30 transform hover:-translate-y-1">
+                <a href="#" className="inline-block px-8 py-4 bg-white text-black font-bold rounded-full transition-all hover:bg-slate-200 hover:shadow-[0_0_20px_rgba(255,255,255,0.3)]">
                     Download Full Resume
                 </a>
             </div>
