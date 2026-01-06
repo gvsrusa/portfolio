@@ -1,5 +1,14 @@
 const projects = [
     {
+        title: 'Insight Agent',
+        description: 'An AI-powered investigation platform featuring real-time research agents, deep-dive capabilities, and interactive history logging.',
+        tech: ['React 19', 'LangChain', 'Vercel AI SDK', 'Postgres'],
+        repo: 'https://github.com/gvsrusa/insight-agent',
+        demo: 'https://insight-agent.via.org.in/',
+        image: '/projects/insight-agent.png',
+        color: 'from-blue-600 to-indigo-600'
+    },
+    {
         title: 'Lottery Wheels',
         description: 'A comprehensive lottery wheeling system generator with smart pick strategies and randomized distribution logic.',
         tech: ['JavaScript', 'React', 'Algorithms'],
