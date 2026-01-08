@@ -9,7 +9,7 @@ const Hero = () => {
     }, [])
 
     return (
-        <section id="hero" className="min-h-screen flex items-center relative overflow-hidden pt-20 px-6">
+        <section id="hero" className="min-h-screen flex items-center relative overflow-hidden pt-36 md:pt-20 px-6">
 
             {/* Background Decor */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-indigo-600/20 rounded-full blur-[120px] -z-10 opacity-50"></div>
@@ -34,7 +34,7 @@ const Hero = () => {
                     </h1>
 
                     <p className="text-slate-400 text-lg md:text-xl leading-relaxed mb-12 max-w-lg">
-                        I'm Venkata Subbarao Gorantla, a software engineer specialized in building high-performance web applications with clean code and modern design.
+                        I'm Venkata Subbarao Gorantla, a Senior Full Stack Engineer & AI Specialist building autonomous agents, quantum-ready algorithms, and high-performance digital experiences.
                     </p>
 
                     <div className="flex flex-col sm:flex-row items-center gap-6 justify-start">

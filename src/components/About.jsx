@@ -11,17 +11,17 @@ const About = () => {
 
                 <div className="glass-panel p-8 md:p-12 rounded-3xl mb-12 transform hover:scale-[1.01] transition-transform duration-500">
                     <p className="text-slate-300 text-lg md:text-xl leading-relaxed mb-6">
-                        I am a passionate software engineer with a strong focus on building scalable, high-performance web applications.
-                        With expertise in modern JavaScript frameworks and a keen eye for UI/UX design, I bridge the gap between complex engineering and intuitive user experiences.
+                        I am a Senior Full Stack Developer and AI Engineer passionate about bridging the gap between cutting-edge artificial intelligence and intuitive user experiences.
+                        My expertise lies in building <span className="text-white font-semibold">Autonomous Agents</span>, <span className="text-white font-semibold">RAG Pipelines</span>, and scalable web architectures.
                     </p>
                     <p className="text-slate-300 text-lg md:text-xl leading-relaxed">
-                        My journey involves continuous learning and applying cutting-edge technologies to solve real-world problems.
-                        Whether it's front-end architecture or back-end optimization, I strive for excellence in every line of code.
+                        Beyond traditional development, I am deeply researching <span className="text-white font-semibold">Quantum Computing</span> to solve complex computational problems.
+                        Whether it's automating complex workflows or optimizing large-scale systems, I strive for innovation in every line of code.
                     </p>
                 </div>
 
-                <a href="#" className="inline-block px-8 py-4 bg-white text-black font-bold rounded-full transition-all hover:bg-slate-200 hover:shadow-[0_0_20px_rgba(255,255,255,0.3)]">
-                    Download Full Resume
+                <a href="/resume.html" target="_blank" className="inline-block px-8 py-4 bg-white text-black font-bold rounded-full transition-all hover:bg-slate-200 hover:shadow-[0_0_20px_rgba(255,255,255,0.3)]">
+                    View Resume
                 </a>
             </div>
         </section>

@@ -7,7 +7,7 @@ import { Analytics } from "@vercel/analytics/react"
 
 function App() {
   return (
-    <div className="min-h-screen text-slate-100 selection:bg-sky-500/30 font-sans relative">
+    <div className="min-h-screen text-slate-100 selection:bg-sky-500/30 font-sans relative overflow-hidden">
       {/* Global Fixed Background */}
       <div className="fixed inset-0 -z-50 pointer-events-none overflow-hidden">
         <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-purple-600/10 rounded-full blur-[120px]"></div>

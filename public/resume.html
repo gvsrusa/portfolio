@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venkata Subbarao Gorantla - Resume</title>
+    <style>
+        :root {
+            --primary: #2d3748;
+            --secondary: #4a5568;
+            --accent: #2b6cb0;
+            --text: #1a202c;
+            --light: #f7fafc;
+            --border: #e2e8f0;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: var(--text);
+            line-height: 1.6;
+            background: #fff;
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 40px;
+        }
+
+        header {
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 5px;
+            line-height: 1.2;
+        }
+
+        .role {
+            font-size: 1.25rem;
+            color: var(--accent);
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        .contact-info {
+            font-size: 0.95rem;
+            color: var(--secondary);
+        }
+
+        .contact-info a {
+            color: var(--secondary);
+            text-decoration: none;
+            transition: all 0.2s ease;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+
+        .contact-info a:hover {
+            background-color: rgba(43, 108, 176, 0.1);
+            color: var(--accent);
+        }
+
+        .publication a {
+            color: var(--text);
+            text-decoration: none;
+            transition: all 0.2s ease;
+            border-bottom: 1px solid transparent;
+        }
+
+        .publication a:hover {
+            color: var(--accent);
+            background-color: rgba(43, 108, 176, 0.05);
+            border-bottom-color: var(--accent);
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--accent);
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin-bottom: 10px;
+            text-align: justify;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 140px 1fr;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .skill-category {
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .job {
+            margin-bottom: 20px;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 5px;
+        }
+
+        .job-title {
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: var(--primary);
+        }
+
+        .job-company {
+            font-weight: 600;
+            font-style: italic;
+        }
+
+        .job-meta {
+            color: var(--secondary);
+            font-size: 0.9rem;
+            font-style: italic;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        li {
+            position: relative;
+            padding-left: 15px;
+            margin-bottom: 6px;
+        }
+
+        li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        .education-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+        }
+        
+        .degree {
+            font-weight: 600;
+        }
+
+        .publication {
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+
+        @media print {
+            body {
+                padding: 0;
+                max-width: 100%;
+            }
+            a {
+                color: #000;
+                text-decoration: none;
+            }
+            @page {
+                margin: 0.5in;
+            }
+        }
+    </style>
+    <style>
+        .download-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: var(--accent);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            transition: background-color 0.3s;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+            z-index: 1000;
+        }
+        .download-btn:hover {
+            background-color: #2c5282;
+        }
+        @media print {
+            .download-btn {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<button onclick="window.print()" class="download-btn">
+    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+    </svg>
+    Download / Print PDF
+</button>
+
+<header>
+    <h1>Venkata Subbarao Gorantla</h1>
+    <div class="role">Senior Full Stack Developer | AI Engineer | Quantum Computing</div>
+    <div class="contact-info">
+        Dallas, TX | 801-550-5056 | <a href="mailto:gvsrusa@gmail.com">gvsrusa@gmail.com</a> | 
+        <a href="https://www.linkedin.com/in/gvsrusa/">LinkedIn</a> | <a href="https://github.com/gvsrusa">GitHub</a> | <a href="https://portfolio.via.org.in/">Portfolio</a>
+    </div>
+</header>
+
+<section>
+    <h2>Professional Summary</h2>
+    <p>
+        Senior Full Stack Developer with expert-level proficiency in building autonomous AI agents, scalable web applications, and reusable component frameworks. Deep expertise in <strong>React</strong>, <strong>Angular</strong>, and modern frontend architectures combined with robust backend engineering. Proven track record of delivering innovative solutions, including <strong>RAG</strong> systems for context-aware AI and creating seamless user experiences. Passionate about leveraging cutting-edge technologies to build intelligent, high-performance applications that drive business value.
+    </p>
+</section>
+
+<section>
+    <h2>Technical Skills</h2>
+    <div class="skills-grid">
+        <div class="skill-category">Frontend</div>
+        <div>React 19, Angular, Redux, HTML5, CSS3, Tailwind CSS, TypeScript, JavaScript (ES6+), Webpack, Vite, Bootstrap, jQuery</div>
+        
+        <div class="skill-category">Backend & AI</div>
+        <div>Node.js, Python, LangChain, LangGraph, Vercel AI SDK, OpenAI API, RAG Pipelines, Java, Spring Boot, RESTful APIs, GraphQL</div>
+        
+        <div class="skill-category">Database & Cloud</div>
+        <div>PostgreSQL, MongoDB, Oracle, AWS, Azure, GCP, Docker, Kubernetes, Firebase</div>
+        
+        <div class="skill-category">Tools & DevOps</div>
+        <div>Git, Jenkins, GitLab CI/CD, SonarQube, JIRA, Splunk, Grafana</div>
+    </div>
+</section>
+
+<section>
+    <h2>Professional Experience</h2>
+
+    <div class="job">
+        <div class="job-header">
+            <div class="job-title">Senior Full Stack Developer / AI Engineer</div>
+            <div class="job-meta">May 2021 - Present</div>
+        </div>
+        <div class="job-header">
+            <div class="job-company">Client: U.S. Bank | Employer: Express Global Solutions, Inc</div>
+            <div class="job-meta">Irving, TX</div>
+        </div>
+        <ul>
+            <li><strong>AI Agent Development</strong>: Architected and developed a full-stack AI-powered platform aimed at automating deep-dive research and complex testing scenarios using <strong>LangChain</strong> and <strong>LangGraph</strong>, significantly reducing manual testing effort.</li>
+            <li><strong>RAG Implementation</strong>: Implemented <strong>RAG (Retrieval Augmented Generation)</strong> pipelines to contextually analyze large datasets (including investigation documents) and provide accurate, citation-backed intelligence to users.</li>
+            <li><strong>Testing Automation</strong>: Integrated <strong>Playwright MCP</strong> to enable autonomous agents to interact with web interfaces, automating rigorous user experience testing for QA teams.</li>
+            <li><strong>Frontend Architecture</strong>: Developed and enhanced enterprise applications using React.js, Angular.js, TypeScript, Redux-Saga, and Apollo GraphQL, delivering scalable and high-performing user interfaces.</li>
+            <li><strong>Reusable Component Library</strong>: Built micro-frontends and reusable components, dynamically rendering forms and pages from JSON and XSD data sources, significantly reducing development time.</li>
+            <li><strong>API Integration</strong>: Integrated REST, SOAP, and GraphQL APIs to streamline data flow between front-end and back-end services, creating seamless user experiences.</li>
+            <li><strong>Performance Optimization</strong>: Optimized performance through architecture improvements, reducing load times and increasing engagement across banking platforms.</li>
+            <li><strong>CI/CD & DevOps</strong>: Established CI/CD pipelines using CloudBees Jenkins and GitLab CI/CD, and contributed to containerized deployments with Docker and Kubernetes on AWS and Azure cloud environments.</li>
+            <li><strong>Quality Assurance</strong>: Implemented SonarQube, Fortify, and Snyk for code quality and vulnerability scanning, ensuring compliance with strict banking security standards.</li>
+        </ul>
+    </div>
+
+    <div class="job">
+        <div class="job-header">
+            <div class="job-title">Technology Lead</div>
+            <div class="job-meta">Jun 2020 - Apr 2021</div>
+        </div>
+        <div class="job-header">
+            <div class="job-company">Client: UBS | Employer: Infosys Limited</div>
+            <div class="job-meta">Weehawken, NJ</div>
+        </div>
+        <ul>
+            <li>Developed UI using HTML5, CSS3, JavaScript, Typescript, Redux-thunk, ReactJS, Hooks, and LESS, enhancing user experience and interface responsiveness.</li>
+            <li>Wrote test cases with Jest and Enzyme, ensuring code reliability and reducing bugs in production.</li>
+            <li>Executed full stack software development utilizing technology stack such as JavaScript, Node.JS, Express JS, Java, GraphQL, unidirectional data flow, state management, and compositional design patterns, improving application performance and scalability.</li>
+            <li>Utilized Git as a version control tool and followed CI/CD pipeline with TeamCity, streamlining development processes and enhancing deployment efficiency.</li>
+        </ul>
+    </div>
+
+    <div class="job">
+        <div class="job-header">
+            <div class="job-title">Full Stack Developer</div>
+            <div class="job-meta">Jul 2018 - Nov 2019</div>
+        </div>
+        <div class="job-header">
+            <div class="job-company">Client: USAA | Employer: MicroNet IT Solutions, Inc</div>
+            <div class="job-meta">San Antonio, TX</div>
+        </div>
+        <ul>
+            <li>Refactored existing monolithic applications by identifying components that needed transformation to microservices, resulting in improved system scalability and maintainability.</li>
+            <li>Developed UI using HTML, CSS, JavaScript, and ReactJS, enhancing user experience and interface responsiveness.</li>
+            <li>Utilized MERN stack (MongoDB, Express, React, Node.js) to build efficient web applications, improving development speed and application performance.</li>
+            <li>Managed GCP infrastructure resources including IAM, Security Group, and Auto Scaling using Cloud Formation and JSON templates, ensuring robust security and scalability.</li>
+            <li>Developed backend components for the Reporting Dashboard using Java, which enhanced data processing and improved reporting capabilities for end-users.</li>
+            <li>Carried out bug fixing by rigorous testing using JUnit test cases, improving software stability and reducing error rates.</li>
+            <li>Managed version control using Gitlab, ensuring code integrity and collaboration efficiency.</li>
+            <li>Deployed applications using IBM WebSphere Application Server, enhancing deployment speed and reliability.</li>
+            <li>Automated build processes by writing Maven/Gradle build scripts, reducing manual effort and increasing build efficiency.</li>
+        </ul>
+    </div>
+
+    <div class="job">
+        <div class="job-header">
+            <div class="job-title">Full Stack Developer</div>
+            <div class="job-meta">Jul 2017 - Jul 2018</div>
+        </div>
+        <div class="job-header">
+            <div class="job-company">Ascension Technology LLC</div>
+            <div class="job-meta">Stansbury Park, UT</div>
+        </div>
+        <ul>
+            <li>Implemented agile methodology, including daily SCRUM meetings, to enhance team communication and resolve project issues efficiently.</li>
+            <li>Developed a single-page application using ReactJS, which improved code structure and user experience.</li>
+            <li>Implemented new UI functionality using ReactJS and Java, integrating with HCL/Oracle databases and REST Web Services, enhancing system performance and user interaction.</li>
+            <li>Designed responsive user interfaces using HTML5, CSS3, jQuery, ReactJS, and XML, resulting in improved user engagement and accessibility.</li>
+            <li>Implemented responsive design templates using Bootstrap, creating a new interface that enhanced user experience and adaptability across devices.</li>
+            <li>Managed GitHub repositories to maintain file versions, merged code from branch to trunk, and created new branches for new feature implementations, ensuring streamlined development processes.</li>
+            <li>Tested the overall application using Karma and Typescript to maintain product quality by creating individual unit and functional test cases, enhancing reliability and performance.</li>
+        </ul>
+    </div>
+
+    <div class="job">
+        <div class="job-header">
+            <div class="job-title">Frontend Developer</div>
+            <div class="job-meta">Sep 2015 - Jul 2017</div>
+        </div>
+        <div class="job-header">
+            <div class="job-company">Data Care LLC - USA</div>
+            <div class="job-meta">Salt Lake City, UT</div>
+        </div>
+        <ul>
+            <li>Implemented applications using agile methodology with 2-week sprints, enhancing team collaboration and project efficiency.</li>
+            <li>Participated in daily SCRUM meetings to resolve issues with assigned user stories, improving team productivity and project timelines.</li>
+            <li>Built a framework to support the easy creation and consumption of REST Microservices using Java 8, JAX-RS, ReactJS, and Spring, facilitating streamlined service integration.</li>
+            <li>Developed a single-page application using ReactJS, HTML5, and CSS3 styling, enhancing user experience and performance.</li>
+            <li>Used Maven and Gradle for application builds and deployment, streamlining the development process and ensuring reliable releases.</li>
+        </ul>
+    </div>
+
+    <div class="job">
+        <div class="job-header">
+            <div class="job-title">Frontend Developer</div>
+            <div class="job-meta">Jan 2013 - Sep 2015</div>
+        </div>
+        <div class="job-header">
+            <div class="job-company">Data Care LLC - India</div>
+            <div class="job-meta">India</div>
+        </div>
+        <ul>
+            <li>Collaborated using Agile Methodology (Scrum) to meet customer expectations and deliver quality projects on time.</li>
+            <li>Developed the User Interface using HTML5, CSS3, JavaScript, jQuery and enhanced response using twitter Bootstrap and ReactJS.</li>
+            <li>Utilized NodeJS to build web applications with client-server architecture, enabling efficient two-way communication and data exchange.</li>
+            <li>Created RESTful web services interfaces for Java-based runtime engines and accounts, facilitating seamless integration and data management.</li>
+            <li>Designed and developed functionality to retrieve JSON documents from MongoDB and deliver them to clients via RESTful web services, improving data accessibility.</li>
+        </ul>
+    </div>
+
+</section>
+
+<section>
+    <h2>Research Publications</h2>
+    <div class="publication">
+        Chaganti R, Varadarajan V, Gorantla VS, Gadekallu TR, Ravi V. <strong><a href="https://www.mdpi.com/1999-5903/14/9/250" target="_blank">Blockchain-Based Cloud-Enabled Security Monitoring Using Internet of Things in Smart Agriculture</a></strong>. Future Internet. 2022; 14(9):250.
+    </div>
+</section>
+
+<section>
+    <h2>Education</h2>
+    <div class="education-item">
+        <span class="degree">Master's, Management Information Systems</span>
+        <span>Stevens Henager College - Salt Lake City, Utah (2016)</span>
+    </div>
+    <div class="education-item">
+        <span class="degree">Bachelor's, Electronics and Communication Engineering</span>
+        <span>JNTU Kakinada, India (2010)</span>
+    </div>
+</section>
+
+</body>
+</html>

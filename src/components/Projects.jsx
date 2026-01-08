@@ -1,8 +1,8 @@
 const projects = [
     {
         title: 'Insight Agent',
-        description: 'An AI-powered investigation platform featuring real-time research agents, deep-dive capabilities, and interactive history logging.',
-        tech: ['React 19', 'LangChain', 'Vercel AI SDK', 'Postgres'],
+        description: 'An AI-powered investigation platform utilizing autonomous agents, RAG pipelines, and Playwright MCP for automated deep-dive research and complex testing scenarios.',
+        tech: ['React 19', 'LangChain', 'LangGraph', 'Postgres', 'Playwright MCP'],
         repo: 'https://github.com/gvsrusa/insight-agent',
         demo: 'https://insight-agent.via.org.in/',
         image: '/projects/insight-agent.png',
